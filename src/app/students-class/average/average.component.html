@@ -1,0 +1,13 @@
+<button class="btn" routerLink="/">Go back</button>
+<div class="average-table__container">
+    <table class="average-table">
+        <tr>
+            <th>Grade</th>
+            <th>No. of Students</th>
+        </tr>
+        <tr *ngFor="let grade of getGradesKeys()">
+            <th>{{ grade }}</th>
+            <th>{{ average[grade] }}</th>
+        </tr>
+    </table>
+</div>

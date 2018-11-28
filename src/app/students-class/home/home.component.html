@@ -1,0 +1,34 @@
+<div class="home-header">
+    <button class="btn" (click)="showTopStudents = !showTopStudents">3 top students</button>
+    <button class="btn" (click)="showAllStudents = !showAllStudents">All students</button>
+    <button class="btn" routerLink="/average">Average</button>
+</div>
+
+<div class="dashboard" *ngIf="showTopStudents">
+    <div class="dashboard__header">Top 3 students</div>
+
+    <sc-student-card 
+        *ngFor="let student of topStudents" 
+        class="card" 
+        [ngClass] = "student == studentSelected? 'selected' : ''"
+        (click)="selectStudent(student)"
+        [student]="student">
+    </sc-student-card>
+
+</div>
+
+<div class="students-list" *ngIf="showAllStudents">
+    <div class="students-list__header">All students</div>
+
+    <sc-student-card 
+        *ngFor="let student of students" 
+        class="card" 
+        [ngClass] = "student == studentSelected? 'selected' : ''"
+        (click)="selectStudent(student)"
+        [student]="student">
+    </sc-student-card>
+
+</div>
+
+<sc-student-record class="student-record" [student]="studentSelected" *ngIf="studentSelected">
+</sc-student-record>

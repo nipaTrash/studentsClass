@@ -1,0 +1,16 @@
+
+<div class="student-record__firstname">
+    First name: <strong>{{studentRecord?.firstname}}</strong>
+</div>
+<div class="student-record__lastname">
+    Last name: <strong>{{studentRecord?.lastname}}</strong>
+</div>
+
+<div class="student-record__grade">
+    <label for="grade">Grade: </label>
+    <form [formGroup]="gradeForm">
+        <select name="grade" formControlName="grade">
+            <option *ngFor="let grade of gradeOptions" [value]="grade">{{ grade }}</option>
+        </select>
+    </form>
+</div>

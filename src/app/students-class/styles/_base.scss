@@ -1,0 +1,12 @@
+table, tr, th {
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+th {
+    padding: 1rem 3rem;
+}
+
+label,
+form {
+    float: left;
+}

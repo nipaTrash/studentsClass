@@ -1,0 +1,86 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 3rem;
+        border: none;
+        border-radius: .25rem;
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: gray;
+        color: lightgray;
+    }
+}
+
+.home-header {
+    grid-column: 1 / -1;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.dashboard {
+    grid-column: 1 / 2;
+
+    &__header{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem 3rem;
+        background-color: lightgray;
+    }
+}
+
+.students-list {
+    grid-column: 2 / 3;
+
+    &__header{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem 3rem;
+        background-color: lightgray;
+    }
+}
+
+.student-record {
+    height: 10rem;
+    padding: 2rem;
+    grid-column: 1 / -1;
+    border: 1px solid gray;
+    border-radius: .25rem;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.card {
+    padding: 1rem 3rem;
+    border: 1px solid lightgray;
+    border-radius: .25rem;
+    cursor: pointer;
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    justify-items: initial;
+    align-items: center;
+    transition: all .2s;
+    &.selected {
+        background-color: lightgray;
+    }
+    &:hover {
+        transform: translateX(2px);
+        box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+    }
+}
+
+.average-table{
+    margin: auto;
+    &__container{
+        margin-top: 10rem;
+    }
+}
